@@ -2,7 +2,7 @@
 \ProvidesClass{NSF}
 \LoadClass[10pt, letter, timesnewroman, onecolumn]{article}
 
-\RequirePackage[margin=1in]{geometry}
+\RequirePackage[margin=0.8in]{geometry}
 \RequirePackage[pdftex,colorlinks,linkcolor=black,citecolor=black,urlcolor=black,filecolor=black]{hyperref}
 
 \RequirePackage[pdftex]{graphicx}
