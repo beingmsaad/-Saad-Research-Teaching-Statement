@@ -1,58 +1,85 @@
-%--------------------
-% Packages
-% -------------------
-\documentclass[11pt,letter]{article}
-\usepackage[utf8x]{inputenc}
-\usepackage[T1]{fontenc}
-%\usepackage{gentium}
-\usepackage{mathptmx} % Use Times Font
+\documentclass[10pt,stdletter]{newlfm}
+\usepackage{charter}
+\usepackage{etoolbox}
 
 
-\usepackage[pdftex]{graphicx} % Required for including pictures
-\usepackage[swedish]{babel} % Swedish translations
-\usepackage[pdftex,linkcolor=black,pdfborder={0 0 0}]{hyperref} % Format links for pdf
-\usepackage{calc} % To reset the counter in the document after title page
-\usepackage{enumitem} % Includes lists
 
-\frenchspacing % No double spacing between sentences
-\linespread{1.2} % Set linespace
-\usepackage[letter, lmargin=0.1666\paperwidth, rmargin=0.1666\paperwidth, tmargin=0.1111\paperheight, bmargin=0.1111\paperheight]{geometry} %margins
-%\usepackage{parskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Overleaf 14/11/2019
+% Using newlfm now needs a fix. Taken from
+%  https://tex.stackexchange.com/questions/377454/undefined-control-sequence-error-on-fancyreset-fncyolh-and-fncyorh-when-u
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\patchcmd{\@zfancyhead}{\fancy@reset}{\f@nch@reset}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\widowpenalty=1000
+\clubpenalty=1000
 
-\usepackage[all]{nowidow} % Tries to remove widows
-\usepackage[protrusion=true,expansion=true]{microtype} % Improves typography, load after fontpackage is selected
+\newsavebox{\Luiuc}
+\sbox{\Luiuc}{%
+	\parbox[b]{1.75in}{%
+% 		\vspace{0.5in}%
+		\includegraphics[scale=0.3]
+		{fig/download.png}%
+	}%
+}%
+\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
+
+\newlfmP{headermarginskip=20pt}
+\newlfmP{sigsize=50pt}
+\newlfmP{dateskipafter=15pt}
+\newlfmP{addrfromphone}
+\newlfmP{addrfromemail}
+\PhrPhone{Phone}
+\PhrEmail{Email}
 \newcommand{\univ}{Old Dominion University}
-\newcommand{\dept}{VIRGINIA SIMULATION CNTR}
-%-----------------------
-% Begin document
-%-----------------------
-\begin{document} %All text i dokumentet hamnar mellan dessa taggar, allt ovanför är formatering av dokumentet
-\thispagestyle{empty}
-\noindent Dear Chair of Search Committee at \dept,\\
-Dear Department Faculty Search Committee,\\
-%School of Science and Engineering,\\
-%J. B. Speed School of Engineering\\
-%School of Computing and Information Sciences\\
-%College of Electrical Engineering and Computer Science,\\
-\univ\\
-\vspace{10mm}
+\newcommand{\depart}{Department of Computer Science}
 
-I am writing to apply for the position of assistant professor at the \dept. 
-I have heard about many great qualities of \univ, and I was very pleased when I found the announcement for this academic position at the \dept.  
-I have read with interest the university’s philosophy and mission on providing an outstanding learning experience for the students, which is why I am applying for employment consideration.  
-I have the experience both in research and teaching to fulfill the position requirements, and I believe my skills, knowledge, and determination on delivering a quality learning experience to students fits perfectly with the university’s mission and goals. 
-I have working experience in emerging technologies and studies, especially in the field of Cybersecurity, Privacy, Networked Systems, Algorithm and since I have worked on several projects addressing a variety of challenges and real-world applications at two research labs, namely, Security Analytics Research Lab (SEAL) at the University of Central Florida and Information Security Research Laboratory (ISRL) at INHA University, South Korea.
 
-As you will see in my curriculum vitae, teaching statement and research statement, I have a proven record of achievements and qualifications including having two Ph.D. degrees, a long list of training, and publishing in top-tier conferences and high-impact journals, which will allow me to make major contributions to the university. I would appreciate considering me for the position of assistant professor at the \dept. Please, feel free to contact me if any information is needed. I look forward to hearing and meeting with you.
+\lthUiuc
 
-\vspace{10mm}
+% \namefrom{Muhammad Saad}
+\addrfrom{%
+	12013 Solon Dr. Apt 214\\
+	Orlando, FL, USA.
+}
+\phonefrom{407 717 6554}
+\emailfrom{saad.ucf@knights.ucf.edu}
 
-\noindent
-Sincerely yours,\\
-Muhammad Saad\\
-Mar. 27, 2020\\
-12013 Solon Dr. Apartment 214, Orlando, Florida.\\
-Phone: (407) 717-6554\\
-Email: saad.ucf@knights.ucf.edu\\
+\addrto{%
+Dear Chair of Search Committee at \depart\\
+Dear Department Faculty Search Committee\\
+Old Dominion University}
 
+% \greetto{To Whom It May Concern,}
+% \closeline{Sincerely Yours,}
+% \signature{\vspace{-25mm}}
+\newlfmP{letrh=MyLtr,dateno}
+\begin{document}
+\begin{newlfm}
+
+I am writing to apply for the position of Assistant Professor at \depart at \univ, as advertised online by the \depart. I have read the university philosophy and mission statement which motivated to apply for the position. I am a Ph.D. candidate in the Department of Computer Science at University of Central Florida, and I expect to graduate in May 2021. At UCF, I am a member of Security Analytics Lab (SEAL), advised by Professor David Mohaisen. 
+
+At SEAL, I conduct research on the security of distributed systems, particularly the blockchain attack surface. More recently, my research is focused on exposing the gap between theoretical models of blockchain systems and their real world implementation which leads to partitioning attacks. Besides blockchains, I have also worked on projects including security of social networks, provenance in audit applications, mobile system security using the trusted execution environment. Along with the research, I have also engaged in the teaching activities by serving as a teaching assistant for Foundations of Computer Security and Privacy, and Natural Language Processing. As a teaching assistant, I acquired preliminary training in course management, effective communication, and student coaching. My research and teaching experience will complement the job requirements of an assistant professor. 
+
+At \univ, I will also be taking part in co-curricular activities related to student management, department programs, academic contributions, and diversity initiatives. At UCF, I have volunteered as an instructor for Camp Connect program to teach high school kids. I also helped organizing CoNEXT 2019, chaired by my advisor. Concurrently, I have served as a reviewer for twelve conferences and journals. Therefore, as a faculty member, I will contribute to research, teaching, co-curricular initiatives. 
+
+
+
+
+Attached with this letter are my curriculum vitae, teaching statement, and research statement, demonstrating my qualifications for the job and academic achievements. During my Ph.D., I have published thirteen peer-reviewed papers in top-tier conferences and high-impact journals, including the first systematic survey of the blockchain attack surface and two best paper awards. Currently, I have multiple collaboration in academia and industry which will be useful for sponsorship and new research initiatives. I believe that the outstanding research community at \univ will provide excellent opportunities to start my teaching and research career. Please contact me for any questions, and thank you for considering my application. I am looking forward to hearing from you.
+
+\vspace{5mm}
+\hspace{120mm}
+Yours Sincerely,
+
+
+\hspace{120mm}
+Muhammad Saad
+\end{newlfm}
 \end{document}
+
