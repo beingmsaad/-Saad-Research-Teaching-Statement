@@ -1,0 +1,225 @@
+\documentclass[10pt]{article}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{enumitem}
+\usepackage{palatino}
+\usepackage{enumitem}
+
+
+
+\newcommand{\headline}[1]{\vspace{2mm}{\large#1}\vspace{2mm}}
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{titlesec}	
+\usepackage{sectsty}
+\usepackage{xcolor}
+\sectionfont{\color{red!70!black}}
+\newcounter{cnt}{}
+\newcounter{cntt}{}
+\newcounter{cnttx}{}
+\usepackage[left=0.75in,right=0.75in,top=0.75in,bottom=0.75in]{geometry}
+\usepackage{xspace}
+\usepackage{setspace}
+\usepackage{etaremune}
+\usepackage{longtable}
+\newcommand{\ucf}{{University of Central Florida}\xspace}
+\newcommand{\UCF}{{\sc University of Central Florida}\xspace}
+\newcommand{\me}{{{Muhammad Saad}}\xspace}
+\newcommand{\ptitle}[1]{``{\bf #1}''}
+\newcommand{\ecntx}{\setcounter{cnttx}{\value{enumi}}}
+\newcommand{\scntx}{\setcounter{enumi}{\value{cnttx}}}
+\newcommand{\ecnt}{\setcounter{cntt}{\value{enumi}}}
+\newcommand{\scnt}{\setcounter{enumi}{\value{cntt}}}
+\newcommand{\grant}[5]{
+\begin{tabular}{ll}
+{\bf Title} & \em #1\\
+Agency &#2\\
+Role & #3\\
+Amount & #4\\
+Effort & #5\\\vspace{-4mm}
+\end{tabular}
+}
+\if 0
+\newcommand{\grant}[5]{
+#3. Effort: #5. ``#1''. 
+#2. 
+Amount: #4
+}\fi 
+\newcommand{\BfPara}[1]{{\noindent\bf{#1}.}}
+\newcommand{\us}{{$^\star$}\xspace}
+\newcommand{\gs}{{$^\S$}\xspace}
+\newcommand{\is}{{$^\dagger$}\xspace}
+\newcommand{\ps}{{$^\ddagger$}\xspace}
+\usepackage[pageanchor]{hyperref}
+\definecolor{linkcolour}{rgb}{0.1,0.1,0.5}
+%\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+\newcommand{\cash}[1]{{\textcolor{black}{#1}}}
+\newcommand{\etc}{{etc.}\xspace}
+\newcommand{\eg}{{\em e.g.}\xspace}
+\newcommand{\ie}{{\em i.e.,}\xspace}
+\titleformat{\section}{\textcolor{red!70!black}{\large\sc\raggedright}}{}{0em}{}[]
+\titleformat{\subsection}{\large\raggedright}{}{0em}{}[]
+\titlespacing{\section}{4pt}{4pt}{4pt}
+\hyphenation{im-pre-se}
+\usepackage[absolute]{textpos}
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{flushleft}
+\section*{Muhammad Saad}\vspace{-2mm}
+Department of Computer Science, University of Central Florida\\
+4353 Scorpius Street, R1-368, Orlando, FL 32816-2362 USA\\
+Email: \href{saad.ucf@knights.ucf.edu}{saad.ucf@knights.ucf.edu}\\
+Phone: {+1 407 717 6554}\\
+Website: \href{http://www.cs.ucf.edu/~msaad/}{www.cs.ucf.edu/msaad}
+\end{flushleft}
+\section*{\sc Education} 
+
+\noindent {\sc~Ph.D.}, Computer Science, University of Central Florida (2017 -- Current), \textbf{CGPA 3.82} \\
+\vspace{-1mm}
+\noindent{\sc M.Sc.}, Electrical Engineering, Lahore University of Management Sciences (LUMS) (2015 -- 2017), \textbf{CGPA 3.62}\\
+
+
+\section*{\sc Research Interests}
+\begin{enumerate}
+    \item \BfPara{Distributed Systems Security} Analyzing the blockchain attack surface actuated by the cryptographic primitives of the blockchain ledger, distributed communication model of the blockchain nodes, and application-specific use of blockchains in cryptocurrencies and audit applications. 
+    \item \BfPara{Measurements and Modeling} Developing large-scale data collections apparatus for blockchain systems and payment channel networks.
+    \item \BfPara{Formal Analysis} Using theoretical frameworks to address scalability, fairness, and decentralization challenges in the existing blockchain consensus protocols. 
+    \item \BfPara{Trusted Execution Environment} Leveraging security by isolation techniques for cryptocurrency wallets and payment channel networks.   
+\end{enumerate}
+  
+
+
+
+\section*{\sc Professional Appointments}
+
+\begin{tabular}{llll}
+     08/2017 -- Current & Research Assistant &  University of Central Florida & Blockchain Design and Security \\
+    05/2020 -- 07/2020 & Research Intern &  Visa Research & Blockchain Systems \\
+    01/2020 -- 05/2020 & Teaching Assistant &  University of Central Florida & Natural Language Processing \\
+    05/2019 -- 08/2019 & Visiting Researcher &  Information Sciences Institute & Blockchains in Asynchronous Networks \\
+     
+\end{tabular}
+
+
+\section*{\sc Technical Publications and Manuscripts}\label{publications}
+
+\subsection*{\sc \textcolor{red!70!black}{ Conferences}}\label{publications}
+\begin{enumerate}\itemsep=1.5mm
+
+\item {\bf Muhammad Saad}, Aminollah Khormali, and David Mohaisen. {\em ``Dine and Dash: Static, Dynamic, and Economic Analysis of In-Browser Cryptojacking.''} In Electronic Crime Research ({\bf eCrime 2019}), Pittsburgh, USA. 
+
+
+\item {\bf Muhammad Saad}, Victor Cook, Lan Nguyen, My T Thai, and David Mohaisen. ``{\em Partitioning Attacks on Bitcoin: Colliding Space, Time, and Logic.''} In IEEE International Conference on Distributed Computing Systems ({\bf IEEE ICDCS 2019}), Dallas, USA. {\textcolor{red!70!black}{Acceptance Rate: 19.3\%}}
+
+\item {\bf Muhammad Saad}, Laurent Njilla, Charles Kamhoua,  Joongheon Kim,  DaeHun Nyang, and David Mohaisen. {\em ``Mempool Optimization for Defending Against DDoS Attacks in PoW-based Blockchain Systems.''} In IEEE International Conference on Blockchain and Cryptocurrency ({\bf IEEE ICBC 2019}), Seoul, South Korea. {\textcolor{red!70!black}{Acceptance Rate: 19.6\%}}
+
+\item {\bf Muhammad Saad}, Afsah Anwar, Ashar Ahmad,  Hisam Alasmary,  Murat Yukesl, and David Mohaisen. {\em ``RouteChain: Towards Blockchain-based Secure and Efficient BGP Routing.''} In IEEE International Conference on Blockchain and Cryptocurrency ({\bf IEEE ICBC 2019}),  Seoul, South Korea. {\textcolor{red!70!black}{Acceptance Rate: 19.6\%}}
+
+
+\item Ashar Ahmad, {\bf Muhammad Saad}, Laurent Njilla, Charles A. Kamhoua Mostafa Bassiouni, and David Mohaisen. {\em ``BlockTrail: A Scalable Multichain Solution for Blockchain-based Audit Trails.''} In IEEE International Conference on Communications, ({\bf IEEE ICC 2019}), Shanghai, China.
+
+\end{enumerate}
+
+\subsection*{\sc \textcolor{red!70!black}{ Journals}}\label{publications}
+\begin{enumerate}\itemsep=1.5mm
+\item {\bf Muhammad Saad}, Jeffery Spaulding,  Laurent Njilla,  Charles Kamhoua, Sachin Shetty, DaeHun Nyang, and David Mohaisen.{\em ``Exploring the Attack Surface of Blockchains: A Comprehensive Survey.''} In IEEE Communication Surveys and Tutorials (\textbf{CS\&T 2019}). ({\color{red!70!black}{Impact Factor 29}}).
+
+\item {\bf Muhammad Saad}, Jinchun Choi,  DaeHun Nyang,  Joongheon Kim, and David Mohaisen. {\em ``Towards Characterizing Blockchain-based
+Cryptocurrencies for Highly-Accurate Predictions.''} In IEEE Systems Journal (\textbf{ISJ 2019}). ({\color{red!70!black}{ Best Paper Award}}).
+
+\item Ashar Ahmad, {\bf Muhammad Saad}, and David Mohaisen. {\em``Secure and Transparent Audit Logs with BlockAudit.''} In Elsevier Journal of Network and Computer Applications (\textbf{JNCA 2019}).
+
+\end{enumerate}
+
+\subsection*{\sc \textcolor{red!70!black}{ Book Chapters}}\label{publications}
+\begin{enumerate}\itemsep=1.5mm
+
+\item {\bf Muhammad Saad}, Charles Kamhoua, Laurent Njilla, Kevin Kwait, David Mohaisen. 
+{\em ``Shocking Bitcoin’s Memory with Unconfirmed Transactions: New DDoS Attacks and Countermeasures.''} In Blockchain for Distributed Systems. In IEEE Press 2019.
+
+\item {\bf Muhammad Saad}, Jeffrey Spaulding, Charles Kamhoua, Laurent Njilla, DaeHun Nyang, and David Mohaisen. {\em ``Exploring the Attack Surface of Blockchain.''} In Blockchain for Distributed Systems. IEEE Press 2019.
+\end{enumerate}
+
+\subsection*{\sc \textcolor{red!70!black}{ Workshops}}\label{publications}
+\begin{enumerate}\itemsep=1.5mm
+
+ \item {\bf Muhammad Saad}, Laurent Njilla, Charles Kamhoua, and David Mohaisen. {\em ``Countering Selfish Mining in Blockchains.''} In IEEE Workshop on Computing, Networking, and Communications, {\bf CNC 2019}  Honolulu.
+
+ \item Ashar Ahmad, {\bf Muhammad Saad}, Mostafa Bassiouni, and David Mohaisen. {\em ``Towards Blockchain-Driven, Secure and Transparent Audit Logs.''} In International Workshop on Distributed Ledger of Things, {\bf DLoT 2018} (in conjunction with {\bf MobiQuitous 2018}),  New York City, USA. ({\color{red!70!black}{ Best Paper Award}}).
+ 
+ \item {\bf Muhammad Saad} and David Mohaisen. {\em ``Towards Characterizing Blockchain-based Cryptocurrencies for Highly-Accurate Predictions.''} In International Workshop on Hot Topics in Pervasive Mobile and Online Social Networking, {\bf HotPOST 2018} (in conjunction with {\bf IEEE INFOCOM 2018}),  Honolulu, HI, USA.
+
+
+\end{enumerate}
+
+
+
+
+
+
+\subsection*{\sc \textcolor{red!70!black}{Work in Submission}}\label{publications}
+
+\begin{enumerate}\itemsep=1.5mm
+ 
+  
+\item {\bf Muhammad Saad}, Afsah Anwar, Srivatsan Ravi, and David Mohaisen. {\em ``HashSplit: Exploiting Bitcoin Asynchrony to Violate Common Prefix and Chain Quality.''}
+
+\item {\bf Muhammad Saad}, Zhan Qin, Kui Ren, DaeHun Nyang, and David Mohaisen. {\em ``e-PoS: Making Proof-of-Stake Decentralized and Fair.}
+
+
+\item Ashar Ahmad, {\bf Muhammad Saad}, Mostafa Bassiouni, and David Mohaisen. {\em ``BlockTrail: A Service for Secure and Transparent Blockchain-Driven Audit Trail.''} 
+
+
+\item Aminollah Khormali, Hisham Alasmary, Afsah Anwar, Jinchun Choi, Jeman Park, {\bf{Muhammad Saad}}, and David Mohaisen. {\em ``Advances in Domain Name System Security and Privacy: A Survey.''}
+
+
+\item {\bf {Muhammad Saad}}, Muhammad Hassan, and Fareed Zaffar. {\em ``Towards Characterizing the COVID-19 Awareness on Twitter.''}
+\end{enumerate}
+
+
+
+\vspace{-4mm}
+\section*{\sc Services and Mentorship}
+\begin{enumerate}
+    \item \textbf{Technical Program Committee Member}: International Conference on Blockchains (ICB 2020), International Conference on Parallel and Distributed Systems (ICPADS 2019), Internet Measurements Conference (IMC 2019 and received the highest review feedback among 76 shadow TPC members), International Workshop on Lightweight Blockchain for Edge Intelligence and Security (LightChain 2019), Transactions on Parallel and Distributed Systems (TPDS),  and IEEE Access.
+    \item \textbf{External Reviewer}: Network and Distributed Systems Security (NDSS 2018), International Conference on Computer Communications (INFOCOM 2018 and 2019), Transactions on Dependable and Secure Computing (TDSC 2018), and International Conference on Web and Social Media (ICWSM 2018).
+    \item \textbf{Mentor}: High school students under the program organized by Camp Connect.
+    \item \textbf{Volunteer}: ACM CoNEXT 2019, including N2Women panel discussion and mentoring session. 
+\end{enumerate}
+\vspace{-2mm}
+
+
+
+
+\section*{\sc References}
+David Mohaisen, Associate Professor\\
+Department of Computer Science\\
+University of Central Florida\\
+E-mail: mohaisen@ucf.edu\\
+Phone: (407) 823-1294\\
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
