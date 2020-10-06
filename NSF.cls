@@ -12,7 +12,7 @@
 \pagestyle{fancyplain}
 \renewcommand{\headrulewidth}{0pt}
 \fancyhf{}
-\fancyfoot[R]{\sf Research Statement-Page \thepage\ of 5} 
+% \fancyfoot[R]{\sf Research Statement-Page \thepage\ of 6} 
 
 \RequirePackage{titlecaps}
 \RequirePackage[explicit]{titlesec}
